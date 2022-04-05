@@ -4,7 +4,7 @@
       <NumberPad/>
       <Types/>
       <Notes/>
-      <Tags :data-source="tags"/>
+      <Tags :data-source.sync="tags" addTag="addTag"/>
     </Layout>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
   components: {Tags, Notes, Types, NumberPad},
   data() {
     return {
-      tags: ['衣', '食', '住', '行','彩票','医疗']
+      tags: ['衣', '食', '住', '行', '彩票', '医疗']
     }
   }
 };
