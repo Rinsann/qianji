@@ -4,3 +4,24 @@ $font-song: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "So
 
 
 $color-heihlight: dodgerblue;
+
+// placeholder
+
+%clearFix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+$color-shadow: rgba(0, 0, 0, 0.25);
+
+
+%outerShadow {
+  box-shadow: 0 0 3px $color-shadow;
+}
+
+%innerShadow {
+  box-shadow: inset 0 -3px 3px  -3px $color-shadow, inset 0 3px 3px  -3px $color-shadow;
+}
