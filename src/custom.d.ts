@@ -3,7 +3,14 @@ type RecordItem = {
   notes: string,
   type: string,
   amount: number,
-  createdAt?: Date
+  createdAt?: string
+}
+
+
+type RootState = {
+  recordList: RecordItem[],
+  tagList: Tag[],
+  currentTag?: Tag
 }
 
 type Tag = {
