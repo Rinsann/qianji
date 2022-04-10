@@ -1,6 +1,5 @@
 import clone from "@/lib/clone";
 
-const localStorageKeyName = "recordListModel";
 
 const recordStore = {
   recordList: [] as RecordItem[],
