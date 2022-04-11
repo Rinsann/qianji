@@ -27,6 +27,3 @@ type TagListModel = {
 
 }
 
-interface Window {
-
-}
