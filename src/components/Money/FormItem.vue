@@ -2,7 +2,7 @@
   <div>
     <label class="formItem">
       <span class="name">{{ this.fieldName }}</span>
-      <template v-if="type === 'datetime-local'">
+      <template v-if="type === 'date'">
         <input :type="type || 'text'" :value="x(value)"
                @input="onValueChanged($event.target.value)"
                :placeholder="placeholder">
@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {Component, Prop, Watch} from 'vue-property-decorator';
+import {Component, Prop} from 'vue-property-decorator';
 import dayjs from 'dayjs';
 
 @Component
@@ -35,7 +35,7 @@ export default class FormItem extends Vue {
   }
 
   x(isoString: string) {
-    return dayjs(isoString).format('YYYY-MM-DDTHH:mm:ss');
+    return dayjs(isoString).format('YYYY-MM-DD');
   }
 
 }

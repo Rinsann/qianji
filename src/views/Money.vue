@@ -5,7 +5,7 @@
           :value.sync="record.type"/>
     <div class="createdAt">
       <FormItem field-name="日期"
-                type="datetime-local"
+                type="date"
                 placeholder="在这里输入日期"
                 :value.sync="record.createdAt"
       />
@@ -57,7 +57,6 @@ export default class Money extends Vue {
     }
     this.$store.commit('createRecord', this.record);
     if (this.$store.state.createRecordError === null) {
-      window.alert('已保存');
       this.record.notes = '';
     }
   }
